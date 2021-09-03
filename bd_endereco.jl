@@ -21,8 +21,9 @@ function inseir_id(id_cliente)
 end
 
 function  atualiza_endere(id_cliente ,coluna , linha)
+println( typeof( linha))
 
-SQLite.execute(db,"UPDATE endereco SET $coluna = '$linha'  WHERE  id_cliente = $id_cliente ")
+SQLite.execute(db,"UPDATE endereco SET $coluna = '$linha'")
     
 end
 
