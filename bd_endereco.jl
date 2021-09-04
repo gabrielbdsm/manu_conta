@@ -21,24 +21,24 @@ function inseir_id(id_cliente)
 end
 
 function  atualiza_endere(id_cliente ,coluna , linha)
-println( typeof( linha))
 
-SQLite.execute(db,"UPDATE endereco SET $coluna = '$linha'")
+
+SQLite.execute(db,"UPDATE endereco SET $coluna = '$linha' WHERE id_cliente = $id_cliente")
     
 end
 
-function inseir(cep,uf,cidade,bairro,rua,numero,complemento)
+# function inseir(cep,uf,cidade,bairro,rua,numero,complemento)
     
-    SQLite.execute(db,"INSERT INTO endereco(
-    cep, 
-    uf,
-    cidade,
-    bairro,
-    rua,
-    numero,
-    complemento) VALUES
-    ('$cep','$uf','$cidade','$bairro','$rua','$numero','$complemento')")
+#     SQLite.execute(db,"INSERT INTO endereco(
+#     cep, 
+#     uf,
+#     cidade,
+#     bairro,
+#     rua,
+#     numero,
+#     complemento) VALUES
+#     ('$cep','$uf','$cidade','$bairro','$rua','$numero','$complemento')")
     
-end
+# end
 
 end

@@ -21,8 +21,38 @@ SQLite.execute(db,"CREATE TABLE IF NOT EXISTS conta(
 
 
 function inseir_id(id_cliente)
-    SQLite.execute(db,"INSERT INTO conta(id_cliente) VALUES ($id_cliente)")
+    SQLite.execute(db,"INSERT INTO conta(id_cliente , agencia) VALUES ($id_cliente , '0001')")
 end
+
+
+
+function verificar_existencia(coluna , linha )
+    try
+        
+            select =SQLite.DBInterface.execute(db, "SELECT $coluna FROM conta WHERE $coluna = '$linha'")
+            select = DataFrames.DataFrame(select)
+            select = Tuple(select[1,:])
+        catch
+            return false
+        end
+        
+        return true
+    
+
+end
+
+function  consultar(coluna , linha)
+    if  verificar_existencia(coluna , linha) == true
+    select =SQLite.DBInterface.execute(db, "SELECT * FROM conta WHERE $coluna = '$linha'")
+    select = DataFrames.DataFrame(select)
+    select= NamedTuple(select[1,:])
+    
+    return select
+   else
+        return -1
+     end
+end
+
 
 
 end

@@ -29,7 +29,6 @@ route("/criarUser", method = POST) do
     else
       bd_cadrato.insert(cpf , nome , senha, email , telefone)
       dados = bd_cadrato.consultar("cpf" , cpf)
-      println(dados.id_cliente)
       bd_endereco.inseir_id(dados.id_cliente)
       conta.inseir_id(dados.id_cliente)
     end
@@ -43,5 +42,5 @@ route("/getusers") do
 end
 
 
-up(8002, async = false)
+up(8001, async = false)
 end
