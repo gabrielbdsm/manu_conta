@@ -18,17 +18,17 @@ email      TEXT    UNIQUE
 NOT NULL,
 telefone   TEXT    UNIQUE
 NOT NULL,
-saldo      INT)")
+senha_cartao TEXT)")
 
 
 
 
 
-function insert(cpf,nome,senha , email , telefone )
+function insert(cpf,nome,senha , email , telefone ,senha_cartao )
 
     
 SQLite.execute(db,"INSERT INTO dados(cpf,nome,senha, email, telefone , saldo) VALUES
-('$cpf','$nome','$senha' ,'$email', '$telefone' ,'0')")
+('$cpf','$nome','$senha' ,'$email', '$telefone' ,'$senha_cartao')")
 end
 
 
