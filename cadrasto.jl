@@ -4,8 +4,8 @@ using Genie.Router, Genie.Renderer, Genie.Renderer.Html, Genie.Renderer.Json, Ge
 using Pkg
 Pkg.add("JSON")
 using JSON
-#using DataFrames
-#using JSONTables
+using DataFrames
+using JSONTables
 #include("bd_cadrato.jl")
 #include("bd_endereco.jl")
 #include("endereco.jl")
