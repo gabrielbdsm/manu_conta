@@ -1,8 +1,11 @@
 using Genie
 using Genie.Router, Genie.Renderer, Genie.Renderer.Html, Genie.Renderer.Json, Genie.Requests
-#using SQLite
 using Pkg
+Pkg.add("SQLite")
 Pkg.add("JSON")
+Pkg.add("DataFrames")
+Pkg.add("JSONTables")
+using SQLite
 using JSON
 using DataFrames
 using JSONTables
