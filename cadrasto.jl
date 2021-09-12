@@ -1,6 +1,6 @@
 using Genie
 using Genie.Router, Genie.Renderer, Genie.Renderer.Html, Genie.Renderer.Json, Genie.Requests
-#using SQLite
+using SQLite
 #using JSON
 #using DataFrames
 #using JSONTables
