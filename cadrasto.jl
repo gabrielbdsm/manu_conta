@@ -1,9 +1,9 @@
-using Genie
-using Genie.Router, Genie.Renderer, Genie.Renderer.Html, Genie.Renderer.Json, Genie.Requests
-using SQLite
-using JSON
-using DataFrames
-using JSONTables
+#using Genie
+#using Genie.Router, Genie.Renderer, Genie.Renderer.Html, Genie.Renderer.Json, Genie.Requests
+#using SQLite
+#using JSON
+#using DataFrames
+#using JSONTables
 #include("bd_cadrato.jl")
 #include("bd_endereco.jl")
 #include("endereco.jl")
