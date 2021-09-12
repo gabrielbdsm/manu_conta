@@ -10,6 +10,11 @@ include("endereco.jl")
 include("conta.jl")
 include("confir_Email.jl")
 
+route("/") do
+    "Welcome to Genie!"
+  end
+
+
 route("/criarUser", method = POST) do 
     cpf = postpayload(:cpf)
     nome =postpayload(:nome)
