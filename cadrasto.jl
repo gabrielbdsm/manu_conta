@@ -11,7 +11,7 @@ using Genie.Router, Genie.Renderer, Genie.Renderer.Html, Genie.Renderer.Json, Ge
 #include("confir_Email.jl")
 
 route("/") do
-    "Welcome to Genie!"
+    "Welcome to !"
   end
 
 
