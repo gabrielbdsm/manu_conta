@@ -1,1 +1,1 @@
-web: julia --project src/app.jl $PORT
+web: julia cadrasto.jl $PORT
