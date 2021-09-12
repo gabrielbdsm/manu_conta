@@ -11,7 +11,7 @@ using SQLite
 #include("confir_Email.jl")
 
 route("/") do
-    "Welcome to !"
+    "Welc to !"
   end
 
 
