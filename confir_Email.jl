@@ -17,7 +17,7 @@ function enviar_email(email)
     
     SUBJECT = "IC internet banking "
     TEXT = "Seu codigo de reconhecimento:  $codigo"
-    message = "Subject: $SUBJECT\r\n\r\n$TEXT"
+    message = "Subject: $SUBJECTrnrn$TEXT"
     
     
     server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
