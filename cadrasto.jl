@@ -16,7 +16,7 @@ include("bd_cadrato.jl")
 #include("confir_Email.jl")
 
 route("/") do
-    "vai te cuzinho hj?"
+    "servidor conectado"
   end
 
 
@@ -59,7 +59,7 @@ route("/criarUser", method = POST) do
         return "senha deve conter 6 numero "
 
    # else
-    #  bd_cadrato.insert(cpf , nome , senha, email , telefone ,senha_cartao)
+      bd_cadrato.insert(cpf , nome , senha, email , telefone ,senha_cartao)
      # dados = bd_cadrato.consultar("cpf" , cpf)
       #bd_endereco.inseir_id(dados.id_cliente)
       #conta.inseir_id(dados.id_cliente)
