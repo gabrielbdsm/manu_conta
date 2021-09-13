@@ -27,7 +27,7 @@ senha_cartao TEXT)")
 function insert(cpf,nome,senha , email , telefone ,senha_cartao )
 
     
-SQLite.execute(db,"INSERT INTO dados(cpf,nome,senha, email, telefone , saldo) VALUES
+SQLite.execute(db,"INSERT INTO dados(cpf,nome,senha, email, telefone , senha_cartao) VALUES
 ('$cpf','$nome','$senha' ,'$email', '$telefone' ,'$senha_cartao')")
 end
 
