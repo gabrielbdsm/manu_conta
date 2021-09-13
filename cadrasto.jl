@@ -58,10 +58,12 @@ route("/criarUser", method = POST) do
     elseif (verifcar_num(senha_cartao) == false ) || (length(senha_cartao) != 6)
         return "senha deve conter 6 numero "
 
-   # else
+    else
       bd_cadrato.insert(cpf , nome , senha, email , telefone ,senha_cartao)
-     # dados = bd_cadrato.consultar("cpf" , cpf)
-      #bd_endereco.inseir_id(dados.id_cliente)
+      dados = bd_cadrato.consultar("cpf" , cpf)
+      return dados
+        
+       #bd_endereco.inseir_id(dados.id_cliente)
       #conta.inseir_id(dados.id_cliente)
     end
     return "POST OK"
